@@ -1,0 +1,170 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Exercise #1: Example customer questions
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: Below are 3 common customer questions we receive. Please draft responses and/or followup responses to each question in the space below. This exercise helps us evaluate your ability to interpret customer requests and provide clear and comprehensive responses leveraging the available resources found in our docs, public site and app. Feel free to ask clarifying questions back to the customer in your response when appropriate. 
+
+=======================================================================================
+Question #1:
+=======================================================================================
+Hi Segment,
+
+I'm using Wistia and I want to track my videos, specifically I want to track "Play", "Pause", and "End" events. 
+
+- The events need to show up in Google Analytics as events.
+- The GA event Category should be "Video" for all video events.
+- The event label should be the name of the video being played. 
+
+Can you help me with that? I'd love to see actual code samples on how to fire the event. 
+
+Best,
+Sara
+
+Answer #1: 
+================================================================
+
+<Enter your followup question/answer here>
+video.bind (Wistia API) must be used with Wistia to trigger browser events.
+analytics.track to capture relevant browser event
+
+
+
+=======================================================================================
+Question #2:
+=======================================================================================
+Hi Segment,
+
+We recently got up and running on Segment. Got the JS and PHP sources set up broadcasting to Mixpanel, GA and Intercom. I was wondering if it is also possible to connect Intercom as a cloud source and also broadcast the events back to other integrations.
+
+So for example, it would be nice to we could track opens and clicks from Intercom with Segment so we can broadcast those to Mixpanel and GA. We can of course do this ourselves by creating a simple webhook and use the PHP source to do that. But was just wondering if there is an even easier way.
+
+Best,
+Jerome
+
+Answer to Question #2: 
+================================================================
+
+<Enter your followup question/answer here>
+
+
+=======================================================================================
+Question #3:
+=======================================================================================
+Hey Segment,
+
+I'm using analytics.js to track events and I’m currently sending data to Intercom and Google Analytics. I’m tracking a few events that I don’t want to send to Google Analytics, but I do want to send them to Intercom. Can I do this in the Segment UI? If so, where do I do that? Is there another way to filter events in the `.track()` call itself? 
+
+Best,
+Riley
+
+
+Answer to Question #3: 
+================================================================
+
+<Enter your followup question/answer here>
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Exercise #2: Basic SQL exercise
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: Included below are credentials to access an example data set in a Postgres data warehouse, along with some questions requiring basic mysql analysis to answer.
+
+
+=======================================================================================
+Postgres cluster credentials:
+=======================================================================================
+Username: se_interviewee
+Password: YWys0ASk5KA4W9C
+Host: 'interviews.ct2qxqsld693.us-west-2.rds.amazonaws.com'
+Port: 5432
+dbname: dbt6sotajkgv26
+Schema: public
+
+
+=======================================================================================
+Question #1: How many animals live in a Savanna Biome?
+=======================================================================================
+
+<Enter your answer and query here>
+
+
+=======================================================================================
+Question #2: How many biomes are forested?
+=======================================================================================
+
+<Enter your answer and query here>
+
+
+=======================================================================================
+Question #3: Name all species that live in a Tropical Rainforest.
+=======================================================================================
+
+<Enter your answer and query here>
+
+
+=======================================================================================
+Question #4: What’s the third trait of the Tundra biome?
+=======================================================================================
+
+<Enter your answer here>
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Exercise #3: Explaining a technical concept
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: For this exercise, we'd like to test your ability to read code and provide clear technical and non-technical descriptions of what the code is solving for.
+
+=======================================================================================
+Question #1: Describe what the following code block does when executed in a browser
+=======================================================================================
+
+```
+function formatQs() {
+	var output = {};
+	var qs = document.location.search.substring(1);
+	qs = qs.split('&');
+
+	for (var i = 0; i < qs.length; i++) {
+		var tokens = qs[i].split('=');
+	  output[tokens[0].toLowerCase()] = tokens[1];
+	}
+
+	return output;
+}
+```
+
+=======================================================================================
+Question #2: Describe a specific scenario in which the above function would be used for tracking purposes, and more specifically how Google Analytics uses the data to track marketing campaigns.
+=======================================================================================
+
+
+
+
+=======================================================================================
+Question #3: Assuming that the analytics.js library is loaded on the page, please update the code block above to send through the standard utm parameters as properties in an analytics.track() call. Additional requirements:
+* Send only officially supported utm parameters as properties
+* Send only utm parameters included in the URL query string (i.e. don't send null utm parameters)
+* Name the track call: "User Referred"
+=======================================================================================
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+End
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
