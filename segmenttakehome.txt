@@ -89,7 +89,11 @@ Answer to Question #2:
 
 You can set up Intercom as a cloud source! The instructions for doing so are found here: https://segment.com/docs/connections/sources/catalog/cloud-apps/intercom/.
 
-However, because Intercom is an object source, its data can only be exported directly to a data warehouse, and not to another integrated destination like GA or Mixpanel."
+However, because Intercom is an object source, its data can only be exported directly to a data warehouse, and not to another integrated destination like GA or Mixpanel.
+
+Please let me know if you have any further questions.
+
+- Alex"
 
 =======================================================================================
 Question #3:
@@ -105,10 +109,18 @@ Riley
 Answer to Question #3: 
 ================================================================
 
-<Enter your followup question/answer here>
+<I built out a sandbox Segment app myself for this assessment so I could get a feel for the UX and UI but unfortuantely the Destination Filter is behind a Buisness Tier paywall so I wasn't able to play with it myself before answering this question. >
 
+"Hello Riley,
 
+You can filter which data gets sent to which destination using Destination Filters, available in our Buisness Tier. You can find this in the Segment UI by going to the desired destination and selected the `Filters` tab on the top. You can also create filters with more complex conditions by using the Segment Filters API.
 
+Destination Filters documentation: https://segment.com/docs/connections/destinations/destination-filters/
+Destination Filters API documentation: https://reference.segmentapis.com/#6c12fbe8-9f84-4a6c-848e-76a2325cb3c5
+
+Please let me know if you have any further questions.
+
+- Alex"
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
