@@ -29,7 +29,48 @@ Answer #1:
 video.bind (Wistia API) must be used with Wistia to trigger browser events.
 analytics.track to capture relevant browser event
 
+"Hello Sara,
 
+I'm going to assume that you already have Segment installed on your application and already have Google Analytics enabled as a destination. Please let me know if that is not the case and I can help you with that.
+
+If you haven't already, you need to configure the Wistia JavaScript Player API in order to get access to the desired events. 
+
+First, make sure that //fast.wistia.com/assets/external/E-v1.js is being imported into your document. Next, either in a <script> tag (make sure to use defer or place below your video embed) or in an external file, put in the following code:
+
+const video = Wistia.api(<Your video ID as a string>)
+
+This code will give you access to the `video` methods you'll need. Next, you'll need to create three video.bind methods that will enabled you to trigger callback functions after each event. Finally, in the callback function for each bind method, call `analytics.track`. You can add the desired GA label and GA category as properties on the Track call.
+
+video.bind("play", function() {
+  analytics.track("Play", {
+	  category: "Video"
+	  label: <Your video title as a string>
+  });
+});
+
+video.bind("pause", function {
+  analytics.track("Pause", {
+	  category: "Video"
+	  label: <Your video title as a string>
+  });
+});
+
+video.bind("end", function {
+  analytics.track("Pause", {
+	  category: "Video"
+	  label: <Your video title as a string>
+  });
+});
+
+You can find the Wistia API instructions in detail here: https://wistia.com/support/developers/player-api.
+The Track call spec is here: https://segment.com/docs/connections/spec/track/.
+And you can read more about Google Analytics integration with Segment here: https://segment.com/docs/connections/destinations/catalog/google-analytics/.
+
+Please note that these instructions are for Google Analytics: Universal Analytics and not GA4. GA4 support for Segment is coming in the future.
+
+I hope this helps you accomplish your goal. Please let me know if there's anything else I can help you with.
+
+- Alex"
 
 =======================================================================================
 Question #2:
