@@ -25,10 +25,6 @@ Sara
 Answer #1: 
 ================================================================
 
-<Enter your followup question/answer here>
-video.bind (Wistia API) must be used with Wistia to trigger browser events.
-analytics.track to capture relevant browser event
-
 "Hello Sara,
 
 I'm going to assume that you already have Segment installed on your application and already have Google Analytics enabled as a destination. Please let me know if that is not the case and I can help you with that.
@@ -87,8 +83,13 @@ Jerome
 Answer to Question #2: 
 ================================================================
 
-<Enter your followup question/answer here>
+<This doesn't feel like the right answer because of how the question is worded but going through the docs I don't see a way to do this.>
 
+"Hello Jerome,
+
+You can set up Intercom as a cloud source! The instructions for doing so are found here: https://segment.com/docs/connections/sources/catalog/cloud-apps/intercom/.
+
+However, because Intercom is an object source, its data can only be exported directly to a data warehouse, and not to another integrated destination like GA or Mixpanel."
 
 =======================================================================================
 Question #3:
