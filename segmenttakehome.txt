@@ -141,35 +141,33 @@ Port: 5432
 dbname: dbt6sotajkgv26
 Schema: public
 
-
 =======================================================================================
 Question #1: How many animals live in a Savanna Biome?
 =======================================================================================
 
-<Enter your answer and query here>
-
+2 animals live in a Savanna Biome
+SELECT COUNT(id) FROM animals WHERE biome_id='bio52U81';
 
 =======================================================================================
 Question #2: How many biomes are forested?
 =======================================================================================
 
-<Enter your answer and query here>
-
+3 biomes are forested.
+SELECT COUNT(id) FROM biomes WHERE forested='t';
 
 =======================================================================================
 Question #3: Name all species that live in a Tropical Rainforest.
 =======================================================================================
 
-<Enter your answer and query here>
-
+The sloth, the toucan, and the leopard live in the tropical rainforest.
+SELECT name FROM species INNER JOIN animals ON species.id=animals.id WHERE animals.biome_id='bioV4C0Z';
 
 =======================================================================================
 Question #4: What’s the third trait of the Tundra biome?
 =======================================================================================
 
-<Enter your answer here>
-
-
+Low biodiversity is the third trait of the Tundra biome.
+SELECT traits[2] FROM biomes WHERE id='bioYLXOQ';
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
